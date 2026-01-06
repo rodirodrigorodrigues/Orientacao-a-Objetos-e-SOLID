@@ -27,6 +27,7 @@ class QuinzeOuVinteCincoPorcento extends RegraDeCalculo {
 }
 
 // Fábrica ou mapeamento ou lookup de cargos -> regras
+// Encapsula e deixa claro que ao criar um novo cargo devemos linkar uma regra de calculo
 const regrasPorCargo = {
     DESENVOLVEDOR: new DezOuVintePorcento(),
     DBA: new QuinzeOuVinteCincoPorcento(),
@@ -51,3 +52,4 @@ const funcionario2 = { nome: "Maria", cargo: "DBA", salarioBase: 2500 };
 const calculadora = new CalculadoraDeSalario();
 console.log(calculadora.calcula(funcionario1)); // 3200
 console.log(calculadora.calcula(funcionario2)); // 2125
+
